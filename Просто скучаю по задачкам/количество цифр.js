@@ -9,10 +9,22 @@ function а(from, to) {
   return count;
 }
 
-const б = а(1, 1000);
-console.log(б);
+const бб = а(1, 1000);
+console.log(бб);
 
-//2 из диапазона от 1 до 15
+//1,1 стрелочная
+const a = (x, y) => {
+  let count = 0;
+  for (let i = x; i <= y; i++) {
+    count += i.toString().length;
+  }
+  return count;
+};
+
+const bб = a(1, 15);
+console.log(bб);
+
+//2 диапазон от 1 до 15
 
 function a(to) {
   let count = 0;
@@ -28,6 +40,14 @@ function a(to) {
 
 const b = a(15);
 console.log('Андрей - воробей:', b);
+
+//3 стрелочная перебор массива, лаконично но дорогая
+// let а = to => Array.from({length: to}, (с, i) => i + 1)
+//   .reduce((count, num) => count + num.toString().length, 0);
+
+// let б = а(17);
+// console.log('Андрей - воробей:', б);
+
 
 //4
 function а(в) {
@@ -47,4 +67,3 @@ function а(в) {
 const to = 10; // напишите любое значение
 const б = а(to);
 console.log(б);
-
